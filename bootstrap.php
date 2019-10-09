@@ -9,8 +9,5 @@ require realpath(__DIR__) . '/vendor/autoload.php';
 require_once realpath(__DIR__).'/config/app.php';
 
 use Core\App;
-
 $app = new App();
 $app->init();
-
-// require_once CORE.'/Helper.php';

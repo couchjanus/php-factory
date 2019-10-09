@@ -6,7 +6,6 @@ namespace App\Models;
 use Core\Model;
 use PDO;
 
-
 class Worker extends Model
 {
     public function __construct()
@@ -14,9 +13,6 @@ class Worker extends Model
         parent::__construct();
 	}
 
-    /**
-     * @return users list
-    **/
     public static function index() 
     {
         return self::query("SELECT * FROM workers ORDER BY id ASC")->fetchAll(PDO::FETCH_CLASS);
@@ -34,7 +30,7 @@ class Worker extends Model
     
     public static function getById($id)
     {
-        $stmt = self::prepare("SELECT t1.*, t2.name as department FROM workers t1 INNER JOIN departments AS t2 ON t2.id = t1.dep_id WHERE t1.id = :id");
+        $stmt = self::prepare("SELECT t1.*, t2.name as department, t2.price FROM workers t1 INNER JOIN departments AS t2 ON t2.id = t1.dep_id WHERE t1.id = :id");
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_OBJ);

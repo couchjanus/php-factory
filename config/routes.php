@@ -8,4 +8,4 @@ $router->get('404', 'PagesController@notFound');
 
 $router->get('payrolls', 'PayrollController@index');
 $router->get('payrolls/create/{id}', 'PayrollController@create');
-$router->post('payrolls/create', 'PayrollController@store');
+$router->post('payrolls/create/{id}', 'PayrollController@create');

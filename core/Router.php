@@ -54,8 +54,6 @@ class Router
     {
         $controller = CONTROLLERS.$controller;
         
-        // var_dump('$controller: '.$controller);
-        
         $controller = new $controller;
         if (! method_exists($controller, $action)) {
             throw new Exception(

@@ -6,7 +6,6 @@ namespace App\Models;
 use Core\Model;
 use PDO;
 
-
 class Payroll extends Model
 {
     public function __construct()
@@ -14,9 +13,6 @@ class Payroll extends Model
         parent::__construct();
 	}
 
-    /**
-     * @return users list
-    **/
     public static function index() 
     {
         return self::query("SELECT * FROM payrolls ORDER BY id ASC")->fetchAll(PDO::FETCH_CLASS);

@@ -8,10 +8,6 @@ define('DATABASE', 'factory');
 const DRIVER = 'mysql';
 const CHARSET = 'utf8mb4';
 
-/**
- * Данные для подключения к БД
- */
-
 return [
     'db' => [
         'driver' => DRIVER,
