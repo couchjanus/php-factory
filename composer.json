@@ -1,0 +1,19 @@
+{
+    "name": "tim/php-factory",
+    "description": "Peculiar Factory",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Тимофей Аксенов",
+            "email": "purelife2306@gmail.com"
+        }
+    ],
+    "autoload": {
+		"psr-4": {
+            "App\\": "app",
+            "Core\\": "core"
+		}
+	},
+    "require": {}
+}
